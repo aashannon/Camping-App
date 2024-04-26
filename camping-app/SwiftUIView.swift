@@ -20,5 +20,5 @@ struct SwiftUIView: View {
 }
 
 #Preview {
-    SwiftUIView(activeLocation: .constant(Location(name: "test", coordinates: [], equipment: [])), active: .constant(true))
+    SwiftUIView(activeLocation: .constant(Location(name: "", park: "", state: "", coordinates: [], equipment: [])), active: .constant(true))
 }

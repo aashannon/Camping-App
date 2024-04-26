@@ -13,12 +13,16 @@ struct Location: Codable, Identifiable {
     
     enum CodingKeys: CodingKey {
         case name
+        case park
+        case state
         case coordinates
         case equipment
     }
     
     var id = UUID()
     var name: String
+    var park: String
+    var state: String
     var coordinates: [String]
     var equipment: [String]
     var active: Bool = false
@@ -52,12 +56,12 @@ class ReadData: ObservableObject  {
 
 struct LocationsList: View {
     @ObservedObject var data = ReadData();
-    
     @State var activeLocation: Location
     @State var active: Bool = false
+    
     var body: some View {
-        
         if(active) {
+            SwiftUIView(activeLocation: $activeLocation, active: $active)
             LocationView(activeLocation: $activeLocation)
         } else {
             List(data.locations){ location in
@@ -65,28 +69,28 @@ struct LocationsList: View {
                     Text(location.name)
                         .font(.title)
                         .fontWeight(.heavy)
-                        .foregroundColor(Color.gray)
-                        .onTapGesture {
-                            active = true
-                            activeLocation = location
-                            print("workd")
+                        .foregroundColor(Color.purple)
+                    HStack {
+                        Text(location.park)
+                            .foregroundColor(Color.gray)
+                        Spacer()
+                        Text(location.state)
+                            .foregroundColor(Color.gray)
+                    }
                 }
-                
-                HStack {
-                    Text("Lat: \(location.coordinates[0])")
-                    Text("Lon: \(location.coordinates[1])")
+                .onTapGesture {
+                    active = true
+                    activeLocation = location
                 }
-                Text(location.equipment[0])
+
             }
-       
-            }
-                  
+
         }
     }
 }
 
 #Preview {
-    LocationsList(activeLocation: Location(name: "test", coordinates: [], equipment: []), active: false)
+    LocationsList(activeLocation: Location(name: "", park: "", state: "", coordinates: [], equipment: []), active: false)
 }
 
 

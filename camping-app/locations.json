@@ -1,16 +1,97 @@
 [
-   {
+    {
         "name": "Turtle Rock",
+        "state": "California",
+        "park": "Joshua Tree National Park",
         "coordinates": ["34.01342361628177", "-116.16712330596349"],
         "equipment": [
-            "hatchet",
-            "knife",
+            "Hatchet",
+            "Knife",
+            "Sunscreen",
+            "Wide-brimmed hat",
+            "Climbing harness",
+            "Guidebook",
+            "Headlamp"
         ]
     },
     {
-        "name": "Park",
-        "coordinates": ["37.7749", "-122.4194"],
-        "equipment": [""]
-
+        "name": "Old Faithful",
+        "state": "Wyoming",
+        "park": "Yellowstone National Park",
+        "coordinates": ["44.4604986", "-110.8281376"],
+        "equipment": [
+            "Bear spray",
+            "Thermal water bottle",
+            "Waterproof jacket",
+            "Geysers viewing gear",
+            "Wildlife guide",
+            "Headlamp",
+            "Hiking poles",
+            "Long underwear"
+        ]
+    },
+    {
+        "name": "Cadillac Mountain",
+        "state": "Maine",
+        "park": "Acadia National Park",
+        "coordinates": ["44.352891", "-68.224503"],
+        "equipment": [
+            "Windbreaker",
+            "Binoculars",
+            "Trail map",
+            "Sunscreen",
+            "Camera",
+            "Hiking boots",
+            "Backpack",
+            "Water bottle"
+        ]
+    },
+    {
+        "name": "Delicate Arch",
+        "state": "Utah",
+        "park": "Arches National Park",
+        "coordinates": ["38.7436056", "-109.4993251"],
+        "equipment": [
+            "Hydration pack",
+            "Sunscreen",
+            "Camera with a wide lens",
+            "Hiking boots",
+            "Hat",
+            "Sunglasses",
+            "Lightweight clothing"
+        ]
+    },
+    {
+        "name": "El Capitan",
+        "state": "California",
+        "park": "Yosemite National Park",
+        "coordinates": ["37.7339363", "-119.6366736"],
+        "equipment": [
+            "Climbing gear",
+            "Headlamp",
+            "High-calorie snacks",
+            "Guidebook for climbers",
+            "Helmet",
+            "Gloves",
+            "Personal anchor system",
+            "Belay device"
+        ]
+    },
+    {
+        "name": "Albright Visitor Center",
+        "state": "Wyoming",
+        "park": "Yellowstone National Park",
+        "coordinates": ["44.9765742", "-110.7016749"],
+        "equipment": [
+            "Wildlife guide",
+            "Binoculars",
+            "Park map",
+            "Thermal clothing",
+            "Waterproof boots",
+            "First aid kit",
+            "Camera",
+            "Sunscreen",
+            "Insect repellent"
+        ]
     }
 ]

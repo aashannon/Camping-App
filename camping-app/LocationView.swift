@@ -44,13 +44,13 @@ struct LocationView: View {
 
 
             VStack(alignment: .leading) {
-                Text("Turtle Rock")
+                Text(activeLocation.name)
                     .font(.title)
                 HStack {
-                    Text("Joshua Tree National Park")
+                    Text(activeLocation.park)
                         .font(.subheadline)
                     Spacer()
-                    Text("California")
+                    Text(activeLocation.state)
                         .font(.subheadline)
                 }
                 
@@ -104,5 +104,5 @@ struct ToggleWithLabel: View {
 
 
 #Preview {
-    LocationView(activeLocation: .constant(Location(name: "test", coordinates: [], equipment: [])))
+    LocationView(activeLocation: .constant(Location(name: "", park: "", state: "", coordinates: [], equipment: [])))
 }

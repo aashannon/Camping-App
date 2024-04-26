@@ -12,10 +12,13 @@ import UIKit
 struct ContentView: View {
     @State private var isAuthenticated = false
     var body: some View {
-//        LoginView(isAuthenicated: $isAuthenticated)
-        LocationsList(activeLocation: Location(name: "test", coordinates: [], equipment: []), active: false)
+        if(!isAuthenticated) {
+            LoginView(isAuthenicated: $isAuthenticated)
+        } else {
+             LocationsList(activeLocation: Location(name: "", park: "", state: "", coordinates: [], equipment: []), active: false)
+        }
     }
-    
+
 }
 
 #Preview {
