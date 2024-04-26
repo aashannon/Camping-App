@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var isAuthenticated = false
     var body: some View {
 //        LoginView(isAuthenicated: $isAuthenticated)
-        LocationsList(activeLocation: Location(type: "test", coordinates: "t", equipment: []), active: false)
+        LocationsList(activeLocation: Location(name: "test", coordinates: [], equipment: []), active: false)
     }
     
 }

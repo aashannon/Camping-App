@@ -34,10 +34,12 @@ struct LocationView: View {
 //    @State private var isChecked = false
     
     var body: some View {
-        let equipmentLength: Int = Int(campingEquipment.count)
-
+        let equipmentLength: Int = Int(activeLocation.equipment.count)
+        let lat: Double = (activeLocation.coordinates[0] as NSString).doubleValue
+        let lon: Double = (activeLocation.coordinates[1] as NSString).doubleValue
+        
         VStack {
-            MapView(latitude: 37.26915, longitude: -122.14589)
+            MapView(latitude: lat, longitude: lon)
                 .frame(height: 300)
 
 
@@ -102,5 +104,5 @@ struct ToggleWithLabel: View {
 
 
 #Preview {
-    LocationView(activeLocation: .constant(Location(type: "test", coordinates: "t", equipment: [])))
+    LocationView(activeLocation: .constant(Location(name: "test", coordinates: [], equipment: [])))
 }

@@ -11,8 +11,8 @@ struct SwiftUIView: View {
     @Binding var activeLocation: Location;
     @Binding var active: Bool
     var body: some View {
-        Text(activeLocation.type)
-        Text(activeLocation.coordinates)
+        Text(activeLocation.name)
+        Text(activeLocation.coordinates[0])
             .onTapGesture {
                 active = false;
             }
@@ -20,5 +20,5 @@ struct SwiftUIView: View {
 }
 
 #Preview {
-    SwiftUIView(activeLocation: .constant(Location(type: "test", coordinates: "t", equipment: [])), active: .constant(true))
+    SwiftUIView(activeLocation: .constant(Location(name: "test", coordinates: [], equipment: [])), active: .constant(true))
 }

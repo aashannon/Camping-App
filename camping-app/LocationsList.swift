@@ -12,14 +12,14 @@ import UIKit
 struct Location: Codable, Identifiable {
     
     enum CodingKeys: CodingKey {
-        case type
+        case name
         case coordinates
         case equipment
     }
     
     var id = UUID()
-    var type: String
-    var coordinates: String
+    var name: String
+    var coordinates: [String]
     var equipment: [String]
     var active: Bool = false
 }
@@ -58,12 +58,11 @@ struct LocationsList: View {
     var body: some View {
         
         if(active) {
-            SwiftUIView(activeLocation: $activeLocation, active: $active)
             LocationView(activeLocation: $activeLocation)
         } else {
             List(data.locations){ location in
                 VStack(alignment: .leading) {
-                    Text(location.type)
+                    Text(location.name)
                         .font(.title)
                         .fontWeight(.heavy)
                         .foregroundColor(Color.gray)
@@ -73,8 +72,11 @@ struct LocationsList: View {
                             print("workd")
                 }
                 
-                Text(location.coordinates)
-                    Text(location.equipment[0])
+                HStack {
+                    Text("Lat: \(location.coordinates[0])")
+                    Text("Lon: \(location.coordinates[1])")
+                }
+                Text(location.equipment[0])
             }
        
             }
@@ -84,7 +86,7 @@ struct LocationsList: View {
 }
 
 #Preview {
-    LocationsList(activeLocation: Location(type: "test", coordinates: "t", equipment: []), active: false)
+    LocationsList(activeLocation: Location(name: "test", coordinates: [], equipment: []), active: false)
 }
 
 
