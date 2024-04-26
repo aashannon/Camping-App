@@ -1,0 +1,16 @@
+[
+    {
+        "type": "Campsite",
+        "coordinates": "40.7128, -74.0060",
+        "equipment": [
+            "hatchet",
+            "knife",
+        ]
+    },
+    {
+        "type": "Park",
+        "coordinates": "37.7749, -122.4194",
+        "equipment": [""]
+
+    }
+]

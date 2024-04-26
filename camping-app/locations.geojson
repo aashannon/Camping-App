@@ -1,0 +1,12 @@
+{
+    "type": "MultiPolygon",
+    "coordinates": [
+        {"x": 10, "y": 20}
+    ]
+}
+
+
+{
+    "type": "MultiPolygon",
+    "coordinates": "hello world"
+}
