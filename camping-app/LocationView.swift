@@ -59,7 +59,7 @@ struct LocationView: View {
 //                        ToggleWithLabel(isChecked: $isChecked[index], label: campingEquipment[index])
 //                    }
                     ForEach(0..<Int(equipmentLength), id: \.self) { i in
-                        ToggleWithLabel(isChecked: false, label: campingEquipment[i])
+                        ToggleWithLabel(isChecked: false, label: activeLocation.equipment[i])
 
                     }
 
